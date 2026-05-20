@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/Mermaid-Horror/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

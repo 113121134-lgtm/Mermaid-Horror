@@ -1,1 +1,29 @@
+name: Deploy to GitHub Pages
 
+on:
+  push:
+    branches: ["main"] # 當 main 分支有變動時觸發
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4 # 取得你的程式碼
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4 # 設定 Pages 環境
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # 這裡代表部署根目錄，如果你的 HTML 在 dist 資料夾，請改為 'dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # 正式發布

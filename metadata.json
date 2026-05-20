@@ -1,0 +1,6 @@
+{
+  "name": "美人魚恐怖占卜",
+  "description": "深不見底的漆黑深海，人魚正低聲吟唱著帶有詛咒的恐怖占卜。輸入你的姓名與疑惑，或是抽出一枚深海死骨牌，探尋水面之下的黑暗真相。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
